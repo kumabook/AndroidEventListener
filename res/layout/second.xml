@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="back" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Please set people name" />
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/people_name"
+        android:inputType="text" />
+    <Button
+        android:id="@+id/notify_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notify" />
+    
+
+    <TextView
+        android:id="@+id/people_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/people" />
+
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:text="log"/>
+    
+
+</LinearLayout>
