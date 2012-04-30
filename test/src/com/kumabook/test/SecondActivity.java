@@ -1,7 +1,7 @@
-package com.kumabook.demo;
+package com.kumabook.test;
 
 import com.kumabook.EventListener;
-import com.kumabook.R;
+import com.kumabook.test.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +15,6 @@ public class SecondActivity extends Activity{
 	private final static String TAG = "SecondActivity";
 	Button backButton;
 	Button notifyButton;
-	TextView logTextView;
 	TextView peopleNameTextView;
 	EditText nameEditText;
 
@@ -29,13 +28,12 @@ public class SecondActivity extends Activity{
 	private void initializeLayout() {
 		backButton = (Button) findViewById(R.id.next_button);
 		notifyButton = (Button) findViewById(R.id.notify_button);
-		logTextView = (TextView) findViewById(R.id.log);
 		peopleNameTextView = (TextView) findViewById(R.id.people_name);
 		nameEditText = (EditText) findViewById(R.id.name_input);
 	}
 	public void run() {
 		final DemoApplication demoApp = (DemoApplication) this.getApplication();
-		peopleNameTextView.setText("He is " + demoApp.people.name.get() + ".");
+		peopleNameTextView.setText(demoApp.people.name.get());
 		backButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -50,10 +48,9 @@ public class SecondActivity extends Activity{
 		});
 		demoApp.people.name.addListener(new EventListener<String>(){
 			@Override
-			public void listen(String t) {
-				peopleNameTextView.setText("He is " + t + ".");
-				Log.d(TAG, "notify people name change event " + t);
-				logTextView.setText(logTextView.getText() + "\nname is changed " + t);
+			public void listen(String name) {
+				peopleNameTextView.setText(name);
+				Log.d(TAG, "notify people name change event " + name);
 			}
 		});
 	}

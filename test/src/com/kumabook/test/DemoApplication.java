@@ -1,4 +1,4 @@
-package com.kumabook.demo;
+package com.kumabook.test;
 
 import com.kumabook.Property;
 import android.app.Application;

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="hello">Hello</string>
     <string name="people">people name</string>
     <string name="app_name">EventListener</string>
     <string name="notify">notify</string>
